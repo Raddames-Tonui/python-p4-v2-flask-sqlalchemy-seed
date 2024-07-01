@@ -16,9 +16,9 @@ def seed_data():
 
         fake = Faker()  # Create a Faker instance to generate fake data
         Pet.query.delete()  # Delete all existing rows in the "pets" table
-        print("Seeding pets...")  # Inform user that seeding has started
+        print("Seeding pets...") 
 
-        pets = []  # Initialize an empty list to hold Pet instances
+        pets = []  
 
         species = ['Dog', 'Cat', 'Hamster', 'Snake']  # List of species for random selection
 
@@ -31,7 +31,5 @@ def seed_data():
         db.session.add_all(pets)
         db.session.commit()
 
-        print("Seeding complete!")  # Inform user that seeding has finished
-
-# Execute the seed_data function to perform the seeding
+        print("Seeding complete!")
 seed_data()
